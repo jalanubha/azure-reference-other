@@ -150,9 +150,9 @@ Online update (or continuous training) of a recommendation model is not currentl
 
 ### Estimating recommender memory usage  
 
-Currently, the lower bound of Matchbox's memory footprint is `16 * N\(4\T + 2\R)` bytes, where _N_ refers to the number of user-item-rating triples in the training dataset, _T_ to the number of latent traits, and _R_ to the difference between the minimum and maximum rating (in the training dataset).  
+Currently, the lower bound of Matchbox's memory footprint is `16 * N/(4/T + 2/R)` bytes, where _N_ refers to the number of user-item-rating triples in the training dataset, _T_ to the number of latent traits, and _R_ to the difference between the minimum and maximum rating (in the training dataset).  
   
-The size of a serialized Matchbox recommender model is approximately `16 * T\(U\R + I + X + Y)` bytes, where _U_ refers to the number of users, _I_ to the number of items, _X_ to the number of user features, and _Y_ to the number of item features.
+The size of a serialized Matchbox recommender model is approximately `16 * T/(U/R + I + X + Y)` bytes, where _U_ refers to the number of users, _I_ to the number of items, _X_ to the number of user features, and _Y_ to the number of item features.
   
 ##  Expected inputs  
 
